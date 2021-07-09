@@ -14,6 +14,10 @@ graphics module
 - [createMeshCollection](#createMeshCollection)
 - [bindMeshCollection](#bindMeshCollection)
 - [deleteTexture](#deleteTexture)
+- [createMeshCollection](#createMeshCollection)
+- [clearMesh](#clearMesh)
+- [addMeshData](#addMeshData)
+- [getMeshData](#getMeshData)
 
 ## clear
 
@@ -74,12 +78,12 @@ Used to load a texture from given path into memory and bind to the GPU. Current 
 
 | Output type | Description |
 | --- | --- |
-| `integer` | returns id of loaded texture, otherwise 0 |
+| `integer` | returns ID of texture, otherwise 0 |
 
 ## activateTexture
 
 ```lua
-graphics.activateTexture(id)
+graphics.activateTexture(textureId)
 ```
 
 Used to activate texture when about to draw a mesh.
@@ -90,19 +94,19 @@ Used to activate texture when about to draw a mesh.
 
 | Output type | Description |
 | --- | --- |
-| `integer` | returns id of loaded texture, otherwise 0 |
+| `boolean` | Whether or not the operation succeeded |
 
 ## deleteTexture
 
 ```lua
-graphics.deleteTexture(id)
+graphics.deleteTexture(textureId)
 ```
 
 Used to unbind texture from GPU and remove from memory.
 
 | Input | Type | Description |
 | --- | --- | --- |
-| `id` | `integer` | id of texture |
+| `textureId` | `integer` | ID of texture |
 
 | Output type | Description |
 | --- | --- |
@@ -122,7 +126,7 @@ Used to load a mesh collection from given path into memory. Current supported me
 
 | Output type | Description |
 | --- | --- |
-| `integer` | returns id of loaded mesh collection, otherwise 0 |
+| `integer` | returns ID of mesh collection, otherwise 0 |
 
 ## createSheetMeshCollection
 
@@ -144,7 +148,7 @@ Used to create a mesh collection into memory consising of a single mesh. The mes
 
 | Output type | Description |
 | --- | --- |
-| `integer` | returns id of mesh collection, otherwise 0 |
+| `integer` | returns ID of mesh collection, otherwise 0 |
 
 ## createPlaneXYMeshCollection
 
@@ -166,7 +170,7 @@ Used to create a mesh collection into memory consising of a single mesh. The mes
 
 | Output type | Description |
 | --- | --- |
-| `integer` | returns id of mesh collection, otherwise 0 |
+| `integer` | returns ID of mesh collection, otherwise 0 |
 
 ## createMeshCollection
 
@@ -178,36 +182,106 @@ Used to create a empty mesh collection in memory.
 
 | Output type | Description |
 | --- | --- |
-| `integer` | returns id of mesh collection, otherwise 0 |
+| `integer` | returns meshCollectionId of mesh collection, otherwise 0 |
 
 ## bindMeshCollection
 
 ```lua
-graphics.bindMeshCollection(id)
+graphics.bindMeshCollection(meshCollectionId)
 ```
 
 Used to bind mesh collection to the GPU.
 
 | Input | Type | Description |
 | --- | --- | --- |
-| `path` | `string` | path of image to load |
+| `meshCollectionId` | `integer` | ID of mesh collection |
 
 | Output type | Description |
 | --- | --- |
-| `integer` | returns id of loaded texture, otherwise 0 |
+| `boolean` | Whether or not the operation succeeded |
 
 ## deleteTexture
 
 ```lua
-graphics.deleteTexture(id)
+graphics.deleteTexture(meshCollectionId)
 ```
 
 Used to unbind mesh collection from GPU and remove from memory.
 
 | Input | Type | Description |
 | --- | --- | --- |
-| `id` | `integer` | id of mesh collection |
+| `meshCollectionId` | `integer` | ID of mesh collection |
 
 | Output type | Description |
 | --- | --- |
 | `boolean` | Whether or not the operation succeeded |
+
+## createMeshCollection
+
+```lua
+graphics.createMeshCollection()
+```
+
+Used to create a empty mesh in memory and add to a given mesh collection.
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `meshCollectionId` | `integer` | ID of mesh collection to add to |
+
+| Output type | Description |
+| --- | --- |
+| `integer` | returns ID of mesh, otherwise 0 |
+
+## clearMesh
+
+```lua
+graphics.clearMesh(meshCollectionId, meshId)
+```
+
+Used to create a empty mesh in memory and add to a given mesh collection.
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `meshCollectionId` | `integer` | ID of mesh collection |
+| `meshId` | `integer` | ID of mesh |
+
+| Output type | Description |
+| --- | --- |
+| `integer` | returns ID of mesh, otherwise 0 |
+
+## addMeshData
+
+```lua
+graphics.addMeshData(meshCollectionId, meshId, vertices, indicies)
+```
+
+Used to create a empty mesh in memory and add to a given mesh collection.
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `meshCollectionId` | `integer` | ID of mesh collection |
+| `meshId` | `integer` | ID of mesh |
+| `vertices` | `vertexArray` | collection of vertices |
+@ [optional] indicies (indexArray) collection of indicies
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## getMeshData
+
+```lua
+graphics.getMeshData(meshCollectionId, meshId)
+```
+
+Used to get vertex and index arrays of data from a given mesh.
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `meshCollectionId` | `integer` | ID of mesh collection |
+| `meshId` | `integer` | ID of mesh |
+
+| Output type | Description |
+| --- | --- |
+| `vertexArray` | collection of vertices |
+| `indexArray` | collection of indicies if exists otherwise nil |
