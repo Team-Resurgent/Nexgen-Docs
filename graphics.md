@@ -4,7 +4,8 @@ graphics module
 
 - [clear](#clear)
 - [beginScene](#beginScene)
-- [beginScene](#beginScene)
+- [endScene](#endScene)
+- [loadTexture](#loadTexture)
 
 ## clear
 
@@ -39,13 +40,29 @@ Used to denote start of rendering calls.
 | --- | --- |
 | `boolean` | Whether or not the operation succeeded |
 
-## beginScene
+## endScene
 
 ```lua
-graphics.beginScene()
+graphics.endScene()
 ```
 
 Used to denote end of rendering calls.
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## loadTexture
+
+```lua
+graphics.loadTexture(path)
+```
+
+Used to load a texture from given path. Current supported image types are [bmp, gif, hdr, jpg, pic, png, pnm, psd, tga].
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `path` | `string` | path of image to load |
 
 | Output type | Description |
 | --- | --- |
