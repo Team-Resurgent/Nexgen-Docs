@@ -35,11 +35,23 @@ graphics module
 - [getHeight](#getHeight)
 - [disableDepth](#disableDepth)
 - [enableDepth](#enableDepth)
+- [cullingMode](#cullingMode)
 - [enableLights](#enableLights)
 - [disableights](#disableights)
+- [enableLight](#enableLight)
+- [disableLight](#disableLight)
+- [setAmbientLight](#setAmbientLight)
+- [setViewport](#setViewport)
+- [enableScissor](#enableScissor)
 - [disableScissor](#disableScissor)
 - [disableFog](#disableFog)
+- [enableLinearFog](#enableLinearFog)
+- [enableExponentialFog](#enableExponentialFog)
+- [enableExponentialSquaredFog](#enableExponentialSquaredFog)
+- [setColorTint](#setColorTint)
+- [enableBlend](#enableBlend)
 - [disableBlend](#disableBlend)
+- [drawNinePatch](#drawNinePatch)
 - [getHeight](#getHeight)
 
 ## clear
@@ -517,7 +529,7 @@ Sets current shader projection matrix.
 graphics.drawMesh(indexOffset, indexCount)
 ```
 
-Draws current active mesh, with given index pffset and count.
+Draws current active mesh and texture, with given index pffset and count.
 
 | Input | Type | Description |
 | --- | --- | --- |
@@ -576,6 +588,22 @@ Enables depth testing
 | --- | --- |
 | `boolean` | Whether or not the operation succeeded |
 
+## cullingMode
+
+```lua
+graphics.cullingMode(mode)
+```
+
+Enables lights
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `cullingMode` | `integer` | culling mode |
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
 ## enableLights
 
 ```lua
@@ -595,6 +623,95 @@ graphics.disableights()
 ```
 
 Disables lights
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## enableLight
+
+```lua
+graphics.enableLight(lightId, position, distance, color)
+```
+
+Enables light
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `lightId` | `integer` | ID of light |
+| `position` | `vector3` | position |
+| `distance` | `number` | distance |
+| `color` | `color4` | color |
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## disableLight
+
+```lua
+graphics.disableLight(lightId)
+```
+
+Disable light
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `lightId` | `integer` | ID of light |
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## setAmbientLight
+
+```lua
+graphics.setAmbientLight(color)
+```
+
+Sets ambient light
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `color` | `color3` | color |
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## setViewport
+
+```lua
+graphics.setViewport(x, y, width, height)
+```
+
+Sets current viewport
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `x` | `number` | x position |
+| `y` | `number` | y position |
+| `width` | `number` | width |
+| `height` | `number` | height |
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## enableScissor
+
+```lua
+graphics.enableScissor(x, y, width, height)
+```
+
+Enables scissor mode
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `x` | `number` | x position |
+| `y` | `number` | y position |
+| `width` | `number` | width |
+| `height` | `number` | height |
 
 | Output type | Description |
 | --- | --- |
@@ -624,13 +741,120 @@ Disables fog
 | --- | --- |
 | `boolean` | Whether or not the operation succeeded |
 
+## enableLinearFog
+
+```lua
+graphics.enableLinearFog(color, fogStart, fogEnd)
+```
+
+Enables linear fog
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `color` | `color3` | fog color |
+| `fogStart` | `number` | fog start value |
+| `fogEnd` | `number` | fog end value |
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## enableExponentialFog
+
+```lua
+graphics.enableExponentialFog(color, density)
+```
+
+Enables exponential fog
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `color` | `color3` | fog color |
+| `density` | `number` | fog density |
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## enableExponentialSquaredFog
+
+```lua
+graphics.enableExponentialSquaredFog(color, density)
+```
+
+Enables exponential squared fog
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `color` | `color3` | fog color |
+| `density` | `number` | fog density |
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## setColorTint
+
+```lua
+graphics.setColorTint(color)
+```
+
+Sets color tint
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `color` | `color4` | color |
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## enableBlend
+
+```lua
+graphics.enableBlend(blendOp, sFactor, dFactor)
+```
+
+Enables blending
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `blendOp` | `integer` | blend operarton |
+| `sFactor` | `integer` | source blend factor |
+| `dFactor` | `integer` | dest blend factor |
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
 ## disableBlend
 
 ```lua
 graphics.disableBlend()
 ```
 
-Disables blend
+Disables blending
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## drawNinePatch
+
+```lua
+graphics.drawNinePatch(textureId, position, width, height, cornerPercentX, cornerPercentY)
+```
+
+Draws nine patch mesh
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `textureId` | `integer` | index offset |
+| `position` | `vector3` | position |
+| `width` | `number` | width |
+| `height` | `number` | height |
+| `cornerPercentX` | `number` | X axis corner percentage of width |
+| `cornerPercentY` | `number` | Y axis corner percentage of height |
 
 | Output type | Description |
 | --- | --- |
