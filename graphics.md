@@ -19,7 +19,7 @@ Used to clear render depth, stenil and target buffers.
 | `clearStencil` | `boolean` | whether to clear stencil or not |
 | `stencilValue` | `number` | stencil value |
 | `clearTarget` | `boolean` | whether to clear target or not |
-| `targetColor` | `Color4` | target color |
+| `targetColor` | `color4` | target color |
 
 | Output type | Description |
 | --- | --- |
