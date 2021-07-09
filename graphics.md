@@ -18,6 +18,29 @@ graphics module
 - [clearMesh](#clearMesh)
 - [addMeshData](#addMeshData)
 - [getMeshData](#getMeshData)
+- [bindMeshCollection](#bindMeshCollection)
+- [getMeshCount](#getMeshCount)
+- [getMeshName](#getMeshName)
+- [getMeshTransform](#getMeshTransform)
+- [getMeshData](#getMeshData)
+- [getChildMeshIndices](#getChildMeshIndices)
+- [loadFont](#loadFont)
+- [drawFont](#drawFont)
+- [measureFont](#measureFont)
+- [setModelMatrix](#setModelMatrix)
+- [setViewMatrix](#setViewMatrix)
+- [setProjectionMatrix](#setProjectionMatrix)
+- [drawMesh](#drawMesh)
+- [getWidth](#getWidth)
+- [getHeight](#getHeight)
+- [disableDepth](#disableDepth)
+- [enableDepth](#enableDepth)
+- [enableLights](#enableLights)
+- [disableights](#disableights)
+- [disableScissor](#disableScissor)
+- [disableFog](#disableFog)
+- [disableBlend](#disableBlend)
+- [getHeight](#getHeight)
 
 ## clear
 
@@ -78,7 +101,7 @@ Used to load a texture from given path into memory and bind to the GPU. Current 
 
 | Output type | Description |
 | --- | --- |
-| `integer` | returns ID of texture, otherwise 0 |
+| `integer` | ID of texture, otherwise 0 |
 
 ## activateTexture
 
@@ -126,7 +149,7 @@ Used to load a mesh collection from given path into memory. Current supported me
 
 | Output type | Description |
 | --- | --- |
-| `integer` | returns ID of mesh collection, otherwise 0 |
+| `integer` | ID of mesh collection, otherwise 0 |
 
 ## createSheetMeshCollection
 
@@ -148,7 +171,7 @@ Used to create a mesh collection into memory consising of a single mesh. The mes
 
 | Output type | Description |
 | --- | --- |
-| `integer` | returns ID of mesh collection, otherwise 0 |
+| `integer` | ID of mesh collection, otherwise 0 |
 
 ## createPlaneXYMeshCollection
 
@@ -170,7 +193,7 @@ Used to create a mesh collection into memory consising of a single mesh. The mes
 
 | Output type | Description |
 | --- | --- |
-| `integer` | returns ID of mesh collection, otherwise 0 |
+| `integer` | ID of mesh collection, otherwise 0 |
 
 ## createMeshCollection
 
@@ -182,7 +205,7 @@ Used to create a empty mesh collection in memory.
 
 | Output type | Description |
 | --- | --- |
-| `integer` | returns meshCollectionId of mesh collection, otherwise 0 |
+| `integer` | meshCollectionId of mesh collection, otherwise 0 |
 
 ## bindMeshCollection
 
@@ -230,7 +253,7 @@ Used to create a empty mesh in memory and add to a given mesh collection.
 
 | Output type | Description |
 | --- | --- |
-| `integer` | returns ID of mesh, otherwise 0 |
+| `integer` | ID of mesh, otherwise 0 |
 
 ## clearMesh
 
@@ -238,7 +261,7 @@ Used to create a empty mesh in memory and add to a given mesh collection.
 graphics.clearMesh(meshCollectionId, meshId)
 ```
 
-Used to create a empty mesh in memory and add to a given mesh collection.
+Used to clear a mesh in memory for a given mesh collection and mesh.
 
 | Input | Type | Description |
 | --- | --- | --- |
@@ -247,7 +270,7 @@ Used to create a empty mesh in memory and add to a given mesh collection.
 
 | Output type | Description |
 | --- | --- |
-| `integer` | returns ID of mesh, otherwise 0 |
+| `integer` | ID of mesh, otherwise 0 |
 
 ## addMeshData
 
@@ -255,7 +278,7 @@ Used to create a empty mesh in memory and add to a given mesh collection.
 graphics.addMeshData(meshCollectionId, meshId, vertices, indicies)
 ```
 
-Used to create a empty mesh in memory and add to a given mesh collection.
+Used to add vertices and indices to a mesh in memory for a given mesh collection and mesh.
 
 | Input | Type | Description |
 | --- | --- | --- |
@@ -274,7 +297,7 @@ Used to create a empty mesh in memory and add to a given mesh collection.
 graphics.getMeshData(meshCollectionId, meshId)
 ```
 
-Used to get vertex and index arrays of data from a given mesh.
+Used to get vertex and index arrays for a given mesh collection and mesh.
 
 | Input | Type | Description |
 | --- | --- | --- |
@@ -283,5 +306,344 @@ Used to get vertex and index arrays of data from a given mesh.
 
 | Output type | Description |
 | --- | --- |
-| `vertexArray` | collection of vertices |
-| `indexArray` | collection of indicies if exists otherwise nil |
+| `vertexArray` | Collection of vertices |
+| `indexArray` | Collection of indicies if exists otherwise nil |
+
+## bindMeshCollection
+
+```lua
+graphics.bindMeshCollection(meshCollectionId)
+```
+
+Used to activate mesh when about to draw a mesh.
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `meshCollectionId` | `integer` | ID of mesh collection |
+| `meshId` | `integer` | ID of mesh |
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## getMeshCount
+
+```lua
+graphics.getMeshCount(meshCollectionId)
+```
+
+Used to get mesh copunt for a given mesh collection.
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `meshCollectionId` | `integer` | ID of mesh collection |
+
+| Output type | Description |
+| --- | --- |
+| `integer` | Count of meshes |
+
+## getMeshName
+
+```lua
+graphics.getMeshName(meshCollectionId, meshId)
+```
+
+Used to get mesh name for a given mesh collection and mesh.
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `meshCollectionId` | `integer` | ID of mesh collection |
+| `meshId` | `integer` | ID of mesh |
+
+| Output type | Description |
+| --- | --- |
+| `matrix4` | transform matrix for mesh |
+
+## getMeshTransform
+
+```lua
+graphics.getMeshTransform(meshCollectionId, meshId)
+```
+
+Used to get tranform matrix for a given mesh collection and mesh.
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `meshCollectionId` | `integer` | ID of mesh collection |
+| `meshId` | `integer` | ID of mesh |
+
+| Output type | Description |
+| --- | --- |
+| `matrix4` | transform matrix for mesh |
+
+## getMeshData
+
+```lua
+graphics.getMeshData(meshCollectionId, meshId)
+```
+
+Used to get index offset and count for a given mesh collection and mesh.
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `meshCollectionId` | `integer` | ID of mesh collection |
+| `meshId` | `integer` | ID of mesh |
+
+| Output type | Description |
+| --- | --- |
+| `integer` | index offset |
+| `integer` | index count |
+
+## getChildMeshIndices
+
+```lua
+graphics.getChildMeshIndices(meshCollectionId, parentMeshId)
+```
+
+Used to get collecyion of mesh ID's from a given mesh collection and parent mesh.
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `meshCollectionId` | `integer` | ID of mesh collection |
+| `parentMeshId` | `integer` | ID of parent mesh, 0 for root level |
+
+| Output type | Description |
+| --- | --- |
+| `indexArray` | Collection of mesh ID's |
+
+## loadFont
+
+```lua
+graphics.loadFont(path)
+```
+
+Used to load a font from given path into memory and bind to the GPU. Current supported font types are [fnt].
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `path` | `string` | path of image to load |
+
+| Output type | Description |
+| --- | --- |
+| `integer` | ID of font, otherwise 0 |
+
+## drawFont
+
+```lua
+graphics.drawFont(fontId, position, message)
+```
+
+Draws font to current render buffer
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `fontId` | `integer` | ID of font  |
+| `position` | `vector3` | position |
+| `message` | `string` | message |
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## measureFont
+
+```lua
+graphics.measureFont(fontId, message)
+```
+
+Measures font message size.
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `fontId` | `integer` | ID of font  |
+| `message` | `string` | message |
+
+| Output type | Description |
+| --- | --- |
+| `integer` | width |
+| `integer` | height |
+
+## setModelMatrix
+
+```lua
+graphics.setModelMatrix(modelMatrix)
+```
+
+Sets current shader model matrix.
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `modelMatrix` | `matrix4` | model matrix |
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## setViewMatrix
+
+```lua
+graphics.setViewMatrix(viewMatrix)
+```
+
+Sets current shader view matrix.
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `modelMatrix` | `matrix4` | view matrix |
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## setProjectionMatrix
+
+```lua
+graphics.setProjectionMatrix(projectionMatrix)
+```
+
+Sets current shader projection matrix.
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `modelMatrix` | `matrix4` | projection matrix |
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## drawMesh
+
+```lua
+graphics.drawMesh(indexOffset, indexCount)
+```
+
+Draws current active mesh, with given index pffset and count.
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `indexOffset` | `integer` | index offset |
+| `indexCount` | `integer` | index count |
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## getWidth
+
+```lua
+graphics.getWidth()
+```
+
+Gets current render buffer width.
+
+| Output type | Description |
+| --- | --- |
+| `integer` | width |
+
+## getHeight
+
+```lua
+graphics.getHeight()
+```
+
+Gets current render buffer height.
+
+| Output type | Description |
+| --- | --- |
+| `integer` | height |
+
+## disableDepth
+
+```lua
+graphics.disableDepth()
+```
+
+Disables depth testing
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## enableDepth
+
+```lua
+graphics.enableDepth()
+```
+
+Enables depth testing
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## enableLights
+
+```lua
+graphics.enableLights()
+```
+
+Enables lights
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## disableights
+
+```lua
+graphics.disableights()
+```
+
+Disables lights
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## disableScissor
+
+```lua
+graphics.disableScissor()
+```
+
+Disables scissor
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## disableFog
+
+```lua
+graphics.disableFog()
+```
+
+Disables fog
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## disableBlend
+
+```lua
+graphics.disableBlend()
+```
+
+Disables blend
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## getHeight
+
+```lua
+graphics.getHeight()
+```
+
+Swaps current render buffer.
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
