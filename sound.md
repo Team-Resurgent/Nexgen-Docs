@@ -80,7 +80,7 @@ Used to set repeat flag on sound.
 | Input | Type | Description |
 | --- | --- | --- |
 | `id` | `integer` | ID of sound |
-| `count` | `integer` | index count |
+| `count` | `integer` | times to repeat, -1 to repeat for ever |
 
 | Output type | Description |
 | --- | --- |
