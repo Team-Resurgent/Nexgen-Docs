@@ -17,6 +17,11 @@ sound.load(path)
 
 Used to load a sound from given path into memory. Current supported formats are [wav].
 
+| Input | Type | Description |
+| --- | --- | --- |
+| `path` | `string` | path of sound to load |
+
+
 | Output type | Description |
 | --- | --- |
 | `integer` | ID of sound, otherwise 0 |
