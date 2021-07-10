@@ -12,17 +12,17 @@ graphics module
 - [createSheetMeshCollection](#createSheetMeshCollection)
 - [createPlaneXYMeshCollection](#createPlaneXYMeshCollection)
 - [createMeshCollection](#createMeshCollection)
-- [bindMeshCollection](#bindMeshCollection)
 - [deleteTexture](#deleteTexture)
 - [createMeshCollection](#createMeshCollection)
 - [clearMesh](#clearMesh)
 - [addMeshData](#addMeshData)
 - [getMeshData](#getMeshData)
-- [bindMeshCollection](#bindMeshCollection)
-- [getMeshCount](#getMeshCount)
+- [bindMesh](#bindMesh)
+- [activateMesh](#activateMesh)
 - [getMeshName](#getMeshName)
 - [getMeshTransform](#getMeshTransform)
 - [getMeshData](#getMeshData)
+- [getMeshIndices](#getMeshIndices)
 - [getChildMeshIndices](#getChildMeshIndices)
 - [loadFont](#loadFont)
 - [drawFont](#drawFont)
@@ -52,7 +52,7 @@ graphics module
 - [enableBlend](#enableBlend)
 - [disableBlend](#disableBlend)
 - [drawNinePatch](#drawNinePatch)
-- [getHeight](#getHeight)
+- [swapBuffers](#swapBuffers)
 
 ## clear
 
@@ -219,22 +219,6 @@ Used to create a empty mesh collection in memory.
 | --- | --- |
 | `integer` | meshCollectionId of mesh collection, otherwise 0 |
 
-## bindMeshCollection
-
-```lua
-graphics.bindMeshCollection(meshCollectionId)
-```
-
-Used to bind mesh collection to the GPU.
-
-| Input | Type | Description |
-| --- | --- | --- |
-| `meshCollectionId` | `integer` | ID of mesh collection |
-
-| Output type | Description |
-| --- | --- |
-| `boolean` | Whether or not the operation succeeded |
-
 ## deleteTexture
 
 ```lua
@@ -321,10 +305,27 @@ Used to get vertex and index arrays for a given mesh collection and mesh.
 | `vertexArray` | Collection of vertices |
 | `indexArray` | Collection of indicies if exists otherwise nil |
 
-## bindMeshCollection
+## bindMesh
 
 ```lua
-graphics.bindMeshCollection(meshCollectionId)
+graphics.bindMesh(meshCollectionId, meshId)
+```
+
+Used to bind mesh in memory to the GPU.
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `meshCollectionId` | `integer` | ID of mesh collection |
+| `meshId` | `integer` | ID of mesh |
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## activateMesh
+
+```lua
+graphics.activateMesh(meshCollectionId, meshId)
 ```
 
 Used to activate mesh when about to draw a mesh.
@@ -337,22 +338,6 @@ Used to activate mesh when about to draw a mesh.
 | Output type | Description |
 | --- | --- |
 | `boolean` | Whether or not the operation succeeded |
-
-## getMeshCount
-
-```lua
-graphics.getMeshCount(meshCollectionId)
-```
-
-Used to get mesh copunt for a given mesh collection.
-
-| Input | Type | Description |
-| --- | --- | --- |
-| `meshCollectionId` | `integer` | ID of mesh collection |
-
-| Output type | Description |
-| --- | --- |
-| `integer` | Count of meshes |
 
 ## getMeshName
 
@@ -405,6 +390,22 @@ Used to get index offset and count for a given mesh collection and mesh.
 | --- | --- |
 | `integer` | index offset |
 | `integer` | index count |
+
+## getMeshIndices
+
+```lua
+graphics.getMeshIndices(meshCollectionId)
+```
+
+Used to get collecyion of mesh ID's from a given mesh collection.
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `meshCollectionId` | `integer` | ID of mesh collection |
+
+| Output type | Description |
+| --- | --- |
+| `indexArray` | Collection of mesh ID's |
 
 ## getChildMeshIndices
 
@@ -860,10 +861,10 @@ Draws nine patch mesh
 | --- | --- |
 | `boolean` | Whether or not the operation succeeded |
 
-## getHeight
+## swapBuffers
 
 ```lua
-graphics.getHeight()
+graphics.swapBuffers()
 ```
 
 Swaps current render buffer.
