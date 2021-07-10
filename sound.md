@@ -2,17 +2,17 @@
 
 sound module
 
-- [sound](#sound)
-- [sound](#sound)
-- [sound](#sound)
-- [sound](#sound)
-- [sound](#sound)
-- [sound](#sound)
+- [load](#load)
+- [play](#play)
+- [stop](#stop)
+- [isPlaying](#isPlaying)
+- [setRepeat](#setRepeat)
+- [delete](#delete)
 
-## sound
+## load
 
 ```lua
-sound.sound.load(path)
+sound.load(path)
 ```
 
 Used to load a sound from given path into memory. Current supported formats are [wav,].
@@ -21,10 +21,10 @@ Used to load a sound from given path into memory. Current supported formats are 
 | --- | --- |
 | `integer` | ID of sound, otherwise 0 |
 
-## sound
+## play
 
 ```lua
-sound.sound.play(id)
+sound.play(id)
 ```
 
 Used to start playing sound from memory.
@@ -37,10 +37,10 @@ Used to start playing sound from memory.
 | --- | --- |
 | `boolean` | Whether or not the operation succeeded |
 
-## sound
+## stop
 
 ```lua
-sound.sound.stop(id)
+sound.stop(id)
 ```
 
 Used to stop playing sound from memory.
@@ -53,10 +53,10 @@ Used to stop playing sound from memory.
 | --- | --- |
 | `boolean` | Whether or not the operation succeeded |
 
-## sound
+## isPlaying
 
 ```lua
-sound.sound.isPlaying(id)
+sound.isPlaying(id)
 ```
 
 Used to check if sound is still playing.
@@ -69,10 +69,10 @@ Used to check if sound is still playing.
 | --- | --- |
 | `boolean` | Whether or not the operation succeeded |
 
-## sound
+## setRepeat
 
 ```lua
-sound.sound.setRepeat(id, count)
+sound.setRepeat(id, count)
 ```
 
 Used to set repeat flag on sound.
@@ -86,10 +86,10 @@ Used to set repeat flag on sound.
 | --- | --- |
 | `boolean` | Whether or not the operation succeeded |
 
-## sound
+## delete
 
 ```lua
-sound.sound.delete(id)
+sound.delete(id)
 ```
 
 Used to delete sound from memory.
