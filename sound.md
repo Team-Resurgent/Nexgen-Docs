@@ -15,7 +15,7 @@ sound module
 sound.load(path)
 ```
 
-Used to load a sound from given path into memory. Current supported formats are [wav,].
+Used to load a sound from given path into memory. Current supported formats are [wav].
 
 | Output type | Description |
 | --- | --- |
