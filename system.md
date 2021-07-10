@@ -73,6 +73,10 @@ system.launch(path)
 
 Used to launch a executable from given path.
 
+| Input | Type | Description |
+| --- | --- | --- |
+| `path` | `string` | path of executable to load |
+
 | Output type | Description |
 | --- | --- |
 | `boolean` | Whether or not the operation succeeded |
