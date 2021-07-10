@@ -2,10 +2,20 @@
 
 system module
 
+- [debugBreak](#debugBreak)
 - [getTotalVirtualMemory](#getTotalVirtualMemory)
 - [getFreeVirtualMemory](#getFreeVirtualMemory)
 - [getTotalPhysicalMemory](#getTotalPhysicalMemory)
 - [getFreePhysicalMemory](#getFreePhysicalMemory)
+- [launch](#launch)
+
+## debugBreak
+
+```lua
+system.debugBreak()
+```
+
+Used to aid debugging.
 
 ## getTotalVirtualMemory
 
@@ -54,3 +64,15 @@ Used to get amount of physical memory that is free.
 | Output type | Description |
 | --- | --- |
 | `integer` | Total amount of physical memory free. |
+
+## launch
+
+```lua
+system.launch(path)
+```
+
+Used to launch a executable from given path.
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
