@@ -21,7 +21,6 @@ Used to load a sound from given path into memory. Current supported formats are 
 | --- | --- | --- |
 | `path` | `string` | path of sound to load |
 
-
 | Output type | Description |
 | --- | --- |
 | `integer` | ID of sound, otherwise 0 |
@@ -29,14 +28,14 @@ Used to load a sound from given path into memory. Current supported formats are 
 ## play
 
 ```lua
-sound.play(id)
+sound.play(soundId)
 ```
 
 Used to start playing sound from memory.
 
 | Input | Type | Description |
 | --- | --- | --- |
-| `id` | `integer` | ID of sound |
+| `soundId` | `integer` | ID of sound |
 
 | Output type | Description |
 | --- | --- |
@@ -45,14 +44,14 @@ Used to start playing sound from memory.
 ## stop
 
 ```lua
-sound.stop(id)
+sound.stop(soundId)
 ```
 
 Used to stop playing sound from memory.
 
 | Input | Type | Description |
 | --- | --- | --- |
-| `id` | `integer` | ID of sound |
+| `soundId` | `integer` | ID of sound |
 
 | Output type | Description |
 | --- | --- |
@@ -61,14 +60,14 @@ Used to stop playing sound from memory.
 ## isPlaying
 
 ```lua
-sound.isPlaying(id)
+sound.isPlaying(soundId)
 ```
 
 Used to check if sound is still playing.
 
 | Input | Type | Description |
 | --- | --- | --- |
-| `id` | `integer` | ID of sound |
+| `soundId` | `integer` | ID of sound |
 
 | Output type | Description |
 | --- | --- |
@@ -77,14 +76,14 @@ Used to check if sound is still playing.
 ## setRepeat
 
 ```lua
-sound.setRepeat(id, count)
+sound.setRepeat(soundId, count)
 ```
 
 Used to set repeat flag on sound.
 
 | Input | Type | Description |
 | --- | --- | --- |
-| `id` | `integer` | ID of sound |
+| `soundId` | `integer` | ID of sound |
 | `count` | `integer` | times to repeat, -1 to repeat for ever |
 
 | Output type | Description |
@@ -94,14 +93,14 @@ Used to set repeat flag on sound.
 ## delete
 
 ```lua
-sound.delete(id)
+sound.delete(soundId)
 ```
 
 Used to delete sound from memory.
 
 | Input | Type | Description |
 | --- | --- | --- |
-| `id` | `integer` | ID of sound |
+| `soundId` | `integer` | ID of sound |
 
 | Output type | Description |
 | --- | --- |
