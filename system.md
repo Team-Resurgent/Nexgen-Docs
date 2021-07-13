@@ -8,6 +8,8 @@ system module
 - [getTotalPhysicalMemory](#getTotalPhysicalMemory)
 - [getFreePhysicalMemory](#getFreePhysicalMemory)
 - [launch](#launch)
+- [registerCallback](#registerCallback)
+- [unregisterCallback](#unregisterCallback)
 
 ## debugBreak
 
@@ -76,6 +78,38 @@ Used to launch a executable from given path.
 | Input | Type | Description |
 | --- | --- | --- |
 | `path` | `string` | path of executable to load |
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## registerCallback
+
+```lua
+system.registerCallback(callbackFunction)
+```
+
+Used to register a callback fnction.
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `callbackFunction` | `function` | function to be called on refresh |
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## unregisterCallback
+
+```lua
+system.unregisterCallback(callbackFunction)
+```
+
+Used to unregister a callback fnction.
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `unregisterCallback` | `function` | function to be removed on refresh |
 
 | Output type | Description |
 | --- | --- |
