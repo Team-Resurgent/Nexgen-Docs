@@ -103,7 +103,7 @@ controller.Button
 
 Collection of button values to number
 
-@ ['DpadUp'] (string) controller Dpad Up button
+@ 'DpadUp' (string) controller Dpad Up button
 
 
 | Output type | Description |
