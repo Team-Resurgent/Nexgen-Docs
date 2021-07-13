@@ -103,7 +103,7 @@ controller.Button
 
 Collection of button values to number
 
-@ ['DpadUp'] controller Dpad Up button
+@ 'DpadUp' controller Dpad Up button
 @ ['DpadDown'] controller Dpad Down button
 @ ['DpadLeft'] controller Dpad Left button
 @ ['DpadRight'] controller Dpad Right button
