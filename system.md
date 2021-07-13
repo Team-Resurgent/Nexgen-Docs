@@ -7,6 +7,10 @@ system module
 - [getFreeVirtualMemory](#getFreeVirtualMemory)
 - [getTotalPhysicalMemory](#getTotalPhysicalMemory)
 - [getFreePhysicalMemory](#getFreePhysicalMemory)
+- [getDrives](#getDrives)
+- [getDrives](#getDrives)
+- [getFiles](#getFiles)
+- [getDirectories](#getDirectories)
 - [launch](#launch)
 - [registerCallback](#registerCallback)
 - [unregisterCallback](#unregisterCallback)
@@ -66,6 +70,62 @@ Used to get amount of physical memory that is free.
 | Output type | Description |
 | --- | --- |
 | `integer` | Total amount of physical memory free. |
+
+## getDrives
+
+```lua
+system.getDrives()
+```
+
+Used to get refresh mounted drives.
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## getDrives
+
+```lua
+system.getDrives()
+```
+
+Used to get an array of mounted drives.
+
+| Output type | Description |
+| --- | --- |
+| `stringArray` | Collection of drives |
+
+## getFiles
+
+```lua
+system.getFiles(path)
+```
+
+Used to get an array of files in a given path.
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `path` | `string` | path to search |
+
+| Output type | Description |
+| --- | --- |
+| `stringArray` | Collection of files |
+
+## getDirectories
+
+```lua
+system.getDirectories(path)
+```
+
+Used to get an array of directories in a given path.
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `path` | `string` | path to search |
+
+| Output type | Description |
+| --- | --- |
+| `stringArray` | Collection of directories |
 
 ## launch
 
