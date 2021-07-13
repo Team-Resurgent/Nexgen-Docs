@@ -103,25 +103,50 @@ controller.Button
 
 Collection of button values to number
 
-DpadUp = 1
-DpadDown = 2
-DpadLeft = 3
-DpadRight = 4
-Start = 5
-Back = 6
-LeftThumb = 7
-RightThumb = 8
-LeftShoulder = 9
-RightShoulder = 10
-A = 11
-B = 12
-X = 13
-Y = 14
-Black = 15
-White = 16
-LeftTrigger = 17
-RightTrigger = 18
-LeftStickX = 19
-LefttStickY = 20
-RightStickX = 21
-RightStickY = 22
+@ ['DpadUp'] controller Dpad Up button
+@ ['DpadDown'] controller Dpad Down button
+@ ['DpadLeft'] controller Dpad Left button
+@ ['DpadRight'] controller Dpad Right button
+@ ['Start'] controller Start button
+@ ['Back'] controller Back button
+@ ['LeftThumb'] controller Left Thumb button
+@ ['RightThumb'] controller Right Thumb button
+@ ['LeftShoulder'] controller Left Shoulder button
+@ ['RightShoulder'] controller Right Shoulder button
+@ ['A'] controller A button
+@ ['B'] controller B button
+@ ['X'] controller X button
+@ ['Y'] controller Y button
+@ ['Black'] controller Black button
+@ ['White'] controller White button
+@ ['LeftTrigger'] controller Left Trigger button
+@ ['RightTrigger'] controller Right Trigger button
+@ ['LeftStickX'] controller Left Stick X analog stick
+@ ['LeftStickY'] controller Left Stick Y analog stick
+@ ['RightStickX'] controller Right Stick X analog stick
+@ ['RightStickY'] controller Right Stick Y analog stick
+
+| Output type | Description |
+| --- | --- |
+| `integer` | 1 |
+| `integer` | 2 |
+| `integer` | 3 |
+| `integer` | 4 |
+| `integer` | 5 |
+| `integer` | 6 |
+| `integer` | 7 |
+| `integer` | 8 |
+| `integer` | 9 |
+| `integer` | 10 |
+| `integer` | 11 |
+| `integer` | 12 |
+| `integer` | 13 |
+| `integer` | 14 |
+| `integer` | 15 |
+| `integer` | 16 |
+| `integer` | 17 |
+| `integer` | 18 |
+| `integer` | 19 |
+| `integer` | 20 |
+| `integer` | 21 |
+| `integer` | 22 |
