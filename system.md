@@ -7,7 +7,7 @@ system module
 - [getFreeVirtualMemory](#getFreeVirtualMemory)
 - [getTotalPhysicalMemory](#getTotalPhysicalMemory)
 - [getFreePhysicalMemory](#getFreePhysicalMemory)
-- [getDrives](#getDrives)
+- [refreshDrives](#refreshDrives)
 - [getDrives](#getDrives)
 - [getFiles](#getFiles)
 - [getDirectories](#getDirectories)
@@ -71,10 +71,10 @@ Used to get amount of physical memory that is free.
 | --- | --- |
 | `integer` | Total amount of physical memory free. |
 
-## getDrives
+## refreshDrives
 
 ```lua
-system.getDrives()
+system.refreshDrives()
 ```
 
 Used to get refresh mounted drives.
