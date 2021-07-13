@@ -176,10 +176,10 @@ Used to create a mesh collection into memory consising of a single mesh. The mes
 | `x` | `number` | x position |
 | `y` | `number` | y position |
 | `z` | `number` | z position |
-| `width` | `number` | width position |
-| `height` | `number` | height position |
-| `width` | `number` | width position |
-| `cols` | `number` | cols position |
+| `width` | `number` | width |
+| `height` | `number` | height |
+| `width` | `number` | width |
+| `cols` | `number` | cols |
 
 | Output type | Description |
 | --- | --- |
@@ -198,10 +198,10 @@ Used to create a mesh collection into memory consising of a single mesh. The mes
 | `x` | `number` | x position |
 | `y` | `number` | y position |
 | `z` | `number` | z position |
-| `width` | `number` | width position |
-| `height` | `number` | height position |
-| `width` | `number` | width position |
-| `cols` | `number` | cols position |
+| `width` | `number` | width |
+| `height` | `number` | height |
+| `width` | `number` | width |
+| `cols` | `number` | cols |
 
 | Output type | Description |
 | --- | --- |
