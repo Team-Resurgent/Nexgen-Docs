@@ -98,35 +98,35 @@ Used to get controller button value.
 ## Button
 
 ```lua
-controller.Button['%%%%']
+controller.Button['buttonId']
 ```
 
-Collection of button values to number
+Collection of button Id values to number
 
 | Input | Type | Description |
 | --- | --- | --- |
-| `DpadUp` | `string` | controller Dpad Up button |
-| `DpadDown` | `string` | controller Dpad Down button |
-| `DpadLeft` | `string` | controller Dpad Left button |
-| `DpadRight` | `string` | controller Dpad Right button |
-| `Start` | `string` | controller Start button |
-| `Back` | `string` | controller Back button |
-| `LeftThumb` | `string` | controller Left Thumb button |
-| `RightThumb` | `string` | controller Right Thumb button |
-| `LeftShoulder` | `string` | controller Left Shoulder button |
-| `RightShoulder` | `string` | controller Right Shoulder button |
-| `A` | `string` | controller A button |
-| `B` | `string` | controller B button |
-| `X` | `string` | controller X button |
-| `Y` | `string` | controller Y button |
-| `Black` | `string` | controller Black button |
-| `White` | `string` | controller White button |
-| `LeftTrigger` | `string` | controller Left Trigger button |
-| `RightTrigger` | `string` | controller Right Trigger button |
-| `LeftStickX` | `string` | controller Left Stick X analog stick |
-| `LeftStickY` | `string` | controller Left Stick Y analog stick |
-| `RightStickX` | `string` | controller Right Stick X analog stick |
-| `RightStickY` | `string` | controller Right Stick Y analog stick |
+| `DpadUp` | `string` | controller Dpad Up button Id |
+| `DpadDown` | `string` | controller Dpad Down button Id |
+| `DpadLeft` | `string` | controller Dpad Left button Id |
+| `DpadRight` | `string` | controller Dpad Right button Id |
+| `Start` | `string` | controller Start button Id |
+| `Back` | `string` | controller Back button Id |
+| `LeftThumb` | `string` | controller Left Thumb button Id |
+| `RightThumb` | `string` | controller Right Thumb button Id |
+| `LeftShoulder` | `string` | controller Left Shoulder button Id |
+| `RightShoulder` | `string` | controller Right Shoulder button Id |
+| `A` | `string` | controller A button Id |
+| `B` | `string` | controller B button Id |
+| `X` | `string` | controller X button Id |
+| `Y` | `string` | controller Y button Id |
+| `Black` | `string` | controller Black button Id |
+| `White` | `string` | controller White button Id |
+| `LeftTrigger` | `string` | controller Left Trigger button Id |
+| `RightTrigger` | `string` | controller Right Trigger button Id |
+| `LeftStickX` | `string` | controller Left Stick X analog stick Id |
+| `LeftStickY` | `string` | controller Left Stick Y analog stick Id |
+| `RightStickX` | `string` | controller Right Stick X analog stick Id |
+| `RightStickY` | `string` | controller Right Stick Y analog stick Id |
 
 | Output type | Description |
 | --- | --- |
