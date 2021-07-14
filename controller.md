@@ -106,27 +106,27 @@ Collection of button values to number
 | Input | Type | Description |
 | --- | --- | --- |
 | `DpadUp` | `string` | controller Dpad Up button |
-@ DpadDown controller Dpad Down button
-@ DpadLeft controller Dpad Left button
-@ DpadRight controller Dpad Right button
-@ Start controller Start button
-@ Back controller Back button
-@ LeftThumb controller Left Thumb button
-@ RightThumb controller Right Thumb button
-@ LeftShoulder controller Left Shoulder button
-@ RightShoulder controller Right Shoulder button
-@ A controller A button
-@ B controller B button
-@ X controller X button
-@ Y controller Y button
-@ Black controller Black button
-@ White controller White button
-@ LeftTrigger controller Left Trigger button
-@ RightTrigger controller Right Trigger button
-@ LeftStickX controller Left Stick X analog stick
-@ LeftStickY controller Left Stick Y analog stick
-@ RightStickX controller Right Stick X analog stick
-@ RightStickY controller Right Stick Y analog stick
+| `DpadDown` | `string` | controller Dpad Down button |
+| `DpadLeft` | `string` | controller Dpad Left button |
+| `DpadRight` | `string` | controller Dpad Right button |
+| `Start` | `string` | controller Start button |
+| `Back` | `string` | controller Back button |
+| `LeftThumb` | `string` | controller Left Thumb button |
+| `RightThumb` | `string` | controller Right Thumb button |
+| `LeftShoulder` | `string` | controller Left Shoulder button |
+| `RightShoulder` | `string` | controller Right Shoulder button |
+| `A` | `string` | controller A button |
+| `B` | `string` | controller B button |
+| `X` | `string` | controller X button |
+| `Y` | `string` | controller Y button |
+| `Black` | `string` | controller Black button |
+| `White` | `string` | controller White button |
+| `LeftTrigger` | `string` | controller Left Trigger button |
+| `RightTrigger` | `string` | controller Right Trigger button |
+| `LeftStickX` | `string` | controller Left Stick X analog stick |
+| `LeftStickY` | `string` | controller Left Stick Y analog stick |
+| `RightStickX` | `string` | controller Right Stick X analog stick |
+| `RightStickY` | `string` | controller Right Stick Y analog stick |
 
 | Output type | Description |
 | --- | --- |
