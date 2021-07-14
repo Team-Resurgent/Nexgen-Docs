@@ -107,7 +107,7 @@ Collection of button Id values to number. Example: controller.Button['DpadDown']
 
 | Input | Type | Description |
 | --- | --- | --- |
-| `['DpadUp']` | `string` | controller Dpad Up button Id = 1 |
+| `DpadUp` | `string` | controller Dpad Up button Id = 1 |
 | `DpadDown` | `string` | controller Dpad Down button Id = 2 |
 | `DpadLeft` | `string` | controller Dpad Left button Id = 3 |
 | `DpadRight` | `string` | controller Dpad Right button Id = 4 |
