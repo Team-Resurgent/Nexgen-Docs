@@ -101,8 +101,9 @@ Used to get controller button value.
 controller.Button['buttonId']
 ```
 
-Collection of button Id values to number
-Example: controller.Button['DpadDown']
+
+Collection of button Id values to number. Example: controller.Button['DpadDown']
+
 
 | Input | Type | Description |
 | --- | --- | --- |
