@@ -37,7 +37,7 @@ graphics module
 - [enableDepth](#enableDepth)
 - [cullingMode](#cullingMode)
 - [enableLights](#enableLights)
-- [disableights](#disableights)
+- [disableLights](#disableLights)
 - [enableLight](#enableLight)
 - [disableLight](#disableLight)
 - [setAmbientLight](#setAmbientLight)
@@ -595,7 +595,7 @@ Enables depth testing
 graphics.cullingMode(mode)
 ```
 
-Enables lights
+Enables culling
 
 | Input | Type | Description |
 | --- | --- | --- |
@@ -617,10 +617,10 @@ Enables lights
 | --- | --- |
 | `boolean` | Whether or not the operation succeeded |
 
-## disableights
+## disableLights
 
 ```lua
-graphics.disableights()
+graphics.disableLights()
 ```
 
 Disables lights
