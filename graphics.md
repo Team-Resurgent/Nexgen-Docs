@@ -21,7 +21,7 @@ graphics module
 - [activateMesh](#activateMesh)
 - [getMeshName](#getMeshName)
 - [getMeshTransform](#getMeshTransform)
-- [getMeshData](#getMeshData)
+- [getMeshInfo](#getMeshInfo)
 - [getMeshIndices](#getMeshIndices)
 - [getChildMeshIndices](#getChildMeshIndices)
 - [loadFont](#loadFont)
@@ -373,10 +373,10 @@ Used to get tranform matrix for a given mesh collection and mesh.
 | --- | --- |
 | `matrix4` | transform matrix for mesh |
 
-## getMeshData
+## getMeshInfo
 
 ```lua
-graphics.getMeshData(meshCollectionId, meshId)
+graphics.getMeshInfo(meshCollectionId, meshId)
 ```
 
 Used to get index offset and count for a given mesh collection and mesh.
