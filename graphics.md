@@ -7,6 +7,7 @@ graphics module
 - [endScene](#endScene)
 - [loadTexture](#loadTexture)
 - [activateTexture](#activateTexture)
+- [getTextureSize](#getTextureSize)
 - [deleteTexture](#deleteTexture)
 - [loadMeshCollection](#loadMeshCollection)
 - [createSheetMeshCollection](#createSheetMeshCollection)
@@ -130,6 +131,23 @@ Used to activate texture when about to draw a mesh.
 | Output type | Description |
 | --- | --- |
 | `boolean` | Whether or not the operation succeeded |
+
+## getTextureSize
+
+```lua
+graphics.getTextureSize(textureId)
+```
+
+Measures font message size.
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `textureId` | `integer` | ID of texture |
+
+| Output type | Description |
+| --- | --- |
+| `integer` | width |
+| `integer` | height |
 
 ## deleteTexture
 
