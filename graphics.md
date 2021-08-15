@@ -26,6 +26,7 @@ graphics module
 - [getMeshIndices](#getMeshIndices)
 - [getChildMeshIndices](#getChildMeshIndices)
 - [loadFont](#loadFont)
+- [deleteFont](#deleteFont)
 - [drawFont](#drawFont)
 - [measureFont](#measureFont)
 - [setModelMatrix](#setModelMatrix)
@@ -457,6 +458,22 @@ Used to load a font from given path into memory and bind to the GPU. Current sup
 | Output type | Description |
 | --- | --- |
 | `integer` | ID of font, otherwise 0 |
+
+## deleteFont
+
+```lua
+graphics.deleteFont(fontId)
+```
+
+Used to unbind font from GPU and remove from memory.
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `fontId` | `integer` | ID of font |
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
 
 ## drawFont
 
