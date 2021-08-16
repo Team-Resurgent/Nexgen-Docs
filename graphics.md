@@ -219,7 +219,7 @@ Used to create a mesh collection into memory consising of a single mesh. The mes
 | `z` | `number` | z position |
 | `width` | `number` | width |
 | `height` | `number` | height |
-| `width` | `number` | width |
+| `rows` | `number` | rows |
 | `cols` | `number` | cols |
 
 | Output type | Description |
