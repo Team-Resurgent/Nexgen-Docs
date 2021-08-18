@@ -35,8 +35,8 @@ graphics module
 - [drawMesh](#drawMesh)
 - [getWidth](#getWidth)
 - [getHeight](#getHeight)
-- [disableDepth](#disableDepth)
-- [enableDepth](#enableDepth)
+- [disableDepthTest](#disableDepthTest)
+- [enableDepthTest](#enableDepthTest)
 - [cullingMode](#cullingMode)
 - [enableLights](#enableLights)
 - [disableLights](#disableLights)
@@ -600,10 +600,10 @@ Gets current render buffer height.
 | --- | --- |
 | `integer` | height |
 
-## disableDepth
+## disableDepthTest
 
 ```lua
-graphics.disableDepth()
+graphics.disableDepthTest()
 ```
 
 Disables depth testing
@@ -612,13 +612,17 @@ Disables depth testing
 | --- | --- |
 | `boolean` | Whether or not the operation succeeded |
 
-## enableDepth
+## enableDepthTest
 
 ```lua
-graphics.enableDepth()
+graphics.enableDepthTest()
 ```
 
 Enables depth testing
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `depthOp` | `integer` | depth operation |
 
 | Output type | Description |
 | --- | --- |
