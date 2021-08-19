@@ -928,14 +928,14 @@ Collection of DepthOp Id values to number. Example:
 
 | Input | Type | Description |
 | --- | --- | --- |
-| `Never` | `string` | = 0 |
-| `Less` | `string` | = 1 |
-| `Equal` | `string` | = 2 |
-| `LessEqual` | `string` | = 3 |
-| `Greater` | `string` | = 4 |
-| `NotEqual` | `string` | = 5 |
-| `GreaterEqual` | `string` | = 6 |
-| `Always` | `string` | = 7 |
+| `Never` | `string` | Never passes = 0 |
+| `Less` | `string` | Passes if the incoming depth value is less than the stored depth value = 1 |
+| `Equal` | `string` | Passes if the incoming depth value is equal to the stored depth value = 2 |
+| `LessEqual` | `string` | Passes if the incoming depth value is less than or equal to the stored depth value = 3 |
+| `Greater` | `string` | Passes if the incoming depth value is greater than the stored depth value = 4 |
+| `NotEqual` | `string` | Passes if the incoming depth value is not equal to the stored depth value = 5 |
+| `GreaterEqual` | `string` | Passes if the incoming depth value is greater than or equal to the stored depth value = 6 |
+| `Always` | `string` | Always passes = 7 |
 
 ## CullingMode
 
