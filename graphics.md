@@ -949,7 +949,7 @@ Collection of CullingMode Id values to number. Example:
 
 | Input | Type | Description |
 | --- | --- | --- |
-| `FrontAndBack` | `string` | Culls front and back faces = 0 |
+| `None` | `string` | Does not cull faces = 0 |
 | `Front` | `string` | Culls front faces = 1 |
 | `Back` | `string` | Culls back faces = 2 |
 
