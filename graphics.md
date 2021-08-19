@@ -55,6 +55,10 @@ graphics module
 - [disableBlend](#disableBlend)
 - [drawNinePatch](#drawNinePatch)
 - [swapBuffers](#swapBuffers)
+- [DepthOp](#DepthOp)
+- [CullingMode](#CullingMode)
+- [BlendOp](#BlendOp)
+- [BlendFactor](#BlendFactor)
 
 ## clear
 
@@ -911,3 +915,78 @@ Swaps current render buffer.
 | Output type | Description |
 | --- | --- |
 | `boolean` | Whether or not the operation succeeded |
+
+## DepthOp
+
+```lua
+graphics.DepthOp['DepthOpId']
+```
+
+
+Collection of DepthOp Id values to number. Example:
+
+
+@ Never = 0
+@ Less = 1
+@ Equal = 2
+@ LessEqual = 3
+@ Greater = 4
+@ NotEqual = 5
+@ GreaterEqual = 6
+@ Always = 7
+
+## CullingMode
+
+```lua
+graphics.CullingMode['CullingModeId']
+```
+
+
+Collection of CullingMode Id values to number. Example:
+
+
+@ None = 0
+@ Front = 1
+@ Back = 2
+
+
+## BlendOp
+
+```lua
+graphics.BlendOp['BlendOpId']
+```
+
+
+Collection of BlendOp Id values to number. Example:
+
+
+@ Add = 0
+@ Subtract = 1
+@ InvSubtract = 2
+
+
+## BlendFactor
+
+```lua
+graphics.BlendFactor['BlendFactorId']
+```
+
+
+Collection of BlendFactor Id values to number. Example:
+
+
+@ Zero = 0
+@ One = 1
+@ SrcColor = 2
+@ OneMinusSrcColor = 3
+@ DstColor = 4
+@ OneMinusDstColor = 5
+@ SrcAlpha = 6
+@ OneMinusSrcAlpha = 7
+@ DstAlpha = 8
+@ OneMinusDstAlpha = 9
+@ ConstantColor = 10
+@ OneMinusConstantColor = 11
+@ ConstantAlpha = 12
+@ OneMinusConstantAlpha = 13
+@ AlphaSaturate = 14
