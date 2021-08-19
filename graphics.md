@@ -949,9 +949,9 @@ Collection of CullingMode Id values to number. Example:
 
 | Input | Type | Description |
 | --- | --- | --- |
-| `None` | `string` | = 0 |
-| `Front` | `string` | = 1 |
-| `Back` | `string` | = 2 |
+| `FrontAndBack` | `string` | Culls front and back faces = 0 |
+| `Front` | `string` | Culls front faces = 1 |
+| `Back` | `string` | Culls back faces = 2 |
 
 
 ## BlendOp
@@ -966,9 +966,9 @@ Collection of BlendOp Id values to number. Example:
 
 | Input | Type | Description |
 | --- | --- | --- |
-| `Add` | `string` | = 0 |
-| `Subtract` | `string` | = 1 |
-| `InvSubtract` | `string` | = 2 |
+| `Add` | `string` | The source and destination are added to each other = 0 |
+| `Subtract` | `string` | Subtracts the destination from the source = 1 |
+| `InvSubtract` | `string` | Subtracts the source from the destination = 2 |
 
 
 ## BlendFactor
