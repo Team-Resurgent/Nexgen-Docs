@@ -926,14 +926,16 @@ graphics.DepthOp['DepthOpId']
 Collection of DepthOp Id values to number. Example:
 
 
-@ Never = 0
-@ Less = 1
-@ Equal = 2
-@ LessEqual = 3
-@ Greater = 4
-@ NotEqual = 5
-@ GreaterEqual = 6
-@ Always = 7
+| Input | Type | Description |
+| --- | --- | --- |
+| `Never` | `string` | = 0 |
+| `Less` | `string` | = 1 |
+| `Equal` | `string` | = 2 |
+| `LessEqual` | `string` | = 3 |
+| `Greater` | `string` | = 4 |
+| `NotEqual` | `string` | = 5 |
+| `GreaterEqual` | `string` | = 6 |
+| `Always` | `string` | = 7 |
 
 ## CullingMode
 
@@ -945,9 +947,11 @@ graphics.CullingMode['CullingModeId']
 Collection of CullingMode Id values to number. Example:
 
 
-@ None = 0
-@ Front = 1
-@ Back = 2
+| Input | Type | Description |
+| --- | --- | --- |
+| `None` | `string` | = 0 |
+| `Front` | `string` | = 1 |
+| `Back` | `string` | = 2 |
 
 
 ## BlendOp
@@ -960,9 +964,11 @@ graphics.BlendOp['BlendOpId']
 Collection of BlendOp Id values to number. Example:
 
 
-@ Add = 0
-@ Subtract = 1
-@ InvSubtract = 2
+| Input | Type | Description |
+| --- | --- | --- |
+| `Add` | `string` | = 0 |
+| `Subtract` | `string` | = 1 |
+| `InvSubtract` | `string` | = 2 |
 
 
 ## BlendFactor
@@ -975,18 +981,20 @@ graphics.BlendFactor['BlendFactorId']
 Collection of BlendFactor Id values to number. Example:
 
 
-@ Zero = 0
-@ One = 1
-@ SrcColor = 2
-@ OneMinusSrcColor = 3
-@ DstColor = 4
-@ OneMinusDstColor = 5
-@ SrcAlpha = 6
-@ OneMinusSrcAlpha = 7
-@ DstAlpha = 8
-@ OneMinusDstAlpha = 9
-@ ConstantColor = 10
-@ OneMinusConstantColor = 11
-@ ConstantAlpha = 12
-@ OneMinusConstantAlpha = 13
-@ AlphaSaturate = 14
+| Input | Type | Description |
+| --- | --- | --- |
+| `Zero` | `string` | = 0 |
+| `One` | `string` | = 1 |
+| `SrcColor` | `string` | = 2 |
+| `OneMinusSrcColor` | `string` | = 3 |
+| `DstColor` | `string` | = 4 |
+| `OneMinusDstColor` | `string` | = 5 |
+| `SrcAlpha` | `string` | = 6 |
+| `OneMinusSrcAlpha` | `string` | = 7 |
+| `DstAlpha` | `string` | = 8 |
+| `OneMinusDstAlpha` | `string` | = 9 |
+| `ConstantColor` | `string` | = 10 |
+| `OneMinusConstantColor` | `string` | = 11 |
+| `ConstantAlpha` | `string` | = 12 |
+| `OneMinusConstantAlpha` | `string` | = 13 |
+| `AlphaSaturate` | `string` | = 14 |
