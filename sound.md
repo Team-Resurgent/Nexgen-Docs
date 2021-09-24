@@ -79,7 +79,7 @@ Used to check if sound is still playing.
 sound.setRepeat(soundId, count)
 ```
 
-Used to set repeat flag on sound.
+Used to set repeat flag on sound (should be called before play).
 
 | Input | Type | Description |
 | --- | --- | --- |
