@@ -59,6 +59,7 @@ graphics module
 - [CullingMode](#CullingMode)
 - [BlendOp](#BlendOp)
 - [BlendFactor](#BlendFactor)
+- [Filter](#Filter)
 
 ## clear
 
@@ -132,6 +133,7 @@ Used to activate texture when about to draw a mesh.
 | Input | Type | Description |
 | --- | --- | --- |
 | `path` | `string` | path of image to load |
+| `filter` | `integer` | filter to use |
 
 | Output type | Description |
 | --- | --- |
@@ -492,6 +494,7 @@ Draws font to current render buffer
 | `fontId` | `integer` | ID of font  |
 | `position` | `vector3` | position |
 | `message` | `string` | message |
+| `filter` | `integer` | filter to use |
 
 | Output type | Description |
 | --- | --- |
@@ -899,6 +902,7 @@ Draws nine patch mesh
 | `height` | `number` | height |
 | `cornerPercentX` | `number` | X axis corner percentage of width |
 | `cornerPercentY` | `number` | Y axis corner percentage of height |
+| `filter` | `integer` | filter to use |
 
 | Output type | Description |
 | --- | --- |
@@ -998,3 +1002,19 @@ Collection of BlendFactor Id values to number. Example:
 | `ConstantAlpha` | `string` | = 12 |
 | `OneMinusConstantAlpha` | `string` | = 13 |
 | `AlphaSaturate` | `string` | = 14 |
+
+
+## Filter
+
+```lua
+graphics.Filter['FilterId']
+```
+
+
+Collection of Filter Id values to number. Example:
+
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `Linear` | `string` | = 0 |
+| `Nearest` | `string` | = 1 |
