@@ -12,6 +12,11 @@ system module
 - [getFiles](#getFiles)
 - [getDirectories](#getDirectories)
 - [launch](#launch)
+- [systemIsXboxOG](#systemIsXboxOG)
+- [systemIsXbox360](#systemIsXbox360)
+- [systemIsXboxOne](#systemIsXboxOne)
+- [systemIsWindows](#systemIsWindows)
+- [systemGetXboxOGTrayState](#systemGetXboxOGTrayState)
 - [registerCallback](#registerCallback)
 - [unregisterCallback](#unregisterCallback)
 
@@ -138,6 +143,66 @@ Used to launch a executable from given path.
 | Input | Type | Description |
 | --- | --- | --- |
 | `path` | `string` | path of executable to load |
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## systemIsXboxOG
+
+```lua
+system.systemIsXboxOG()
+```
+
+Used to check if nexgen is running on Xbox OG.
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## systemIsXbox360
+
+```lua
+system.systemIsXbox360()
+```
+
+Used to check if nexgen is running on Xbox 360.
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## systemIsXboxOne
+
+```lua
+system.systemIsXboxOne()
+```
+
+Used to check if nexgen is running on Xbox One.
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## systemIsWindows
+
+```lua
+system.systemIsWindows()
+```
+
+Used to check if nexgen is running on Windows.
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## systemGetXboxOGTrayState
+
+```lua
+system.systemGetXboxOGTrayState()
+```
+
+Used to Get the states of the DVD Drive on Xbox OG.
 
 | Output type | Description |
 | --- | --- |
