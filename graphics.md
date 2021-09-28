@@ -56,11 +56,13 @@ graphics module
 - [drawNinePatch](#drawNinePatch)
 - [drawQuad](#drawQuad)
 - [swapBuffers](#swapBuffers)
+- [setDrawMode](#setDrawMode)
 - [DepthOp](#DepthOp)
 - [CullingMode](#CullingMode)
 - [BlendOp](#BlendOp)
 - [BlendFactor](#BlendFactor)
 - [Filter](#Filter)
+- [DrawMode](#DrawMode)
 
 ## clear
 
@@ -949,6 +951,22 @@ Swaps current render buffer.
 | --- | --- |
 | `boolean` | Whether or not the operation succeeded |
 
+## setDrawMode
+
+```lua
+graphics.setDrawMode(operation)
+```
+
+Sets current shader model matrix.
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `operation` | `integer` | draw mode operation |
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
 ## DepthOp
 
 ```lua
@@ -1047,3 +1065,20 @@ Collection of Filter Id values to number. Example:
 | --- | --- | --- |
 | `Linear` | `string` | = 0 |
 | `Nearest` | `string` | = 1 |
+
+
+## DrawMode
+
+```lua
+graphics.DrawMode['DrawModeId']
+```
+
+
+Collection of Draw Mode Id values to number. Example:
+
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `Triangle` | `string` | = 0 |
+| `Line` | `string` | = 1 |
+| `Point` | `string` | = 2 |
