@@ -54,6 +54,7 @@ graphics module
 - [enableBlend](#enableBlend)
 - [disableBlend](#disableBlend)
 - [drawNinePatch](#drawNinePatch)
+- [drawQuad](#drawQuad)
 - [swapBuffers](#swapBuffers)
 - [DepthOp](#DepthOp)
 - [CullingMode](#CullingMode)
@@ -198,13 +199,15 @@ Used to create a mesh collection into memory consising of a single mesh. The mes
 
 | Input | Type | Description |
 | --- | --- | --- |
-| `x` | `number` | x position |
-| `y` | `number` | y position |
-| `z` | `number` | z position |
+| `position` | `vector3` | position |
 | `width` | `number` | width |
 | `height` | `number` | height |
 | `rows` | `number` | rows |
 | `cols` | `number` | cols |
+| `uvX` | `number` | x coord of texture coord 0 to 1 |
+| `uvY` | `number` | y coord of texture coord 0 to 1 |
+| `uvWidth` | `number` | width of texture coord 0 to 1 |
+| `uvHeight` | `number` | eight of texture coord 0 to 1 |
 
 | Output type | Description |
 | --- | --- |
@@ -213,20 +216,22 @@ Used to create a mesh collection into memory consising of a single mesh. The mes
 ## createPlaneXYMeshCollection
 
 ```lua
-graphics.createPlaneXYMeshCollection(x, y, z, width, height, rows, cols)
+graphics.createPlaneXYMeshCollection(x, y, z, width, height, rows, cols, uvX, uvY, uvWidth, uvHeight)
 ```
 
 Used to create a mesh collection into memory consising of a single mesh. The mesh is divided in a number of rows and columns. Each cell is connected to the next.
 
 | Input | Type | Description |
 | --- | --- | --- |
-| `x` | `number` | x position |
-| `y` | `number` | y position |
-| `z` | `number` | z position |
+| `position` | `vector3` | position |
 | `width` | `number` | width |
 | `height` | `number` | height |
 | `rows` | `number` | rows |
 | `cols` | `number` | cols |
+| `uvX` | `number` | x coord of texture coord 0 to 1 |
+| `uvY` | `number` | y coord of texture coord 0 to 1 |
+| `uvWidth` | `number` | width of texture coord 0 to 1 |
+| `uvHeight` | `number` | eight of texture coord 0 to 1 |
 
 | Output type | Description |
 | --- | --- |
@@ -889,20 +894,44 @@ Disables blending
 ## drawNinePatch
 
 ```lua
-graphics.drawNinePatch(textureId, position, width, height, cornerPercentX, cornerPercentY)
+graphics.drawNinePatch(position, width, height, cornerPercentX, cornerPercentY, uvX, uvY, uvWidth, uvHeight)
 ```
 
 Draws nine patch mesh
 
 | Input | Type | Description |
 | --- | --- | --- |
-| `textureId` | `integer` | index offset |
 | `position` | `vector3` | position |
 | `width` | `number` | width |
 | `height` | `number` | height |
 | `cornerPercentX` | `number` | X axis corner percentage of width |
 | `cornerPercentY` | `number` | Y axis corner percentage of height |
-| `filter` | `integer` | filter to use |
+| `uvX` | `number` | x coord of texture coord 0 to 1 |
+| `uvY` | `number` | y coord of texture coord 0 to 1 |
+| `uvWidth` | `number` | width of texture coord 0 to 1 |
+| `uvHeight` | `number` | eight of texture coord 0 to 1 |
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## drawQuad
+
+```lua
+graphics.drawQuad(position, width, height, uvX, uvY, uvWidth, uvHeight)
+```
+
+Draws quad mesh
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `position` | `vector3` | position |
+| `width` | `number` | width |
+| `height` | `number` | height |
+| `uvX` | `number` | x coord of texture coord 0 to 1 |
+| `uvY` | `number` | y coord of texture coord 0 to 1 |
+| `uvWidth` | `number` | width of texture coord 0 to 1 |
+| `uvHeight` | `number` | eight of texture coord 0 to 1 |
 
 | Output type | Description |
 | --- | --- |
