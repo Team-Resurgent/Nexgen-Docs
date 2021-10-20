@@ -6,6 +6,8 @@ sound module
 - [play](#play)
 - [stop](#stop)
 - [isPlaying](#isPlaying)
+- [getVolume](#getVolume)
+- [setVolume](#setVolume)
 - [setRepeat](#setRepeat)
 - [delete](#delete)
 
@@ -68,6 +70,41 @@ Used to check if sound is still playing.
 | Input | Type | Description |
 | --- | --- | --- |
 | `soundId` | `integer` | ID of sound |
+
+| Output type | Description |
+| --- | --- |
+| `boolean` | Whether or not the operation succeeded |
+
+## getVolume
+
+```lua
+sound.getVolume(soundId)
+```
+
+Used to get volume of sound.
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `soundId` | `integer` | ID of sound |
+
+| Output type | Description |
+| --- | --- |
+| `number` | Sound volume percent 0 to 1 for left channel |
+| `number` | Sound volume percent 0 to 1 for right channel |
+
+## setVolume
+
+```lua
+sound.setVolume(soundId, percent)
+```
+
+Used to set volume of sound.
+
+| Input | Type | Description |
+| --- | --- | --- |
+| `soundId` | `integer` | ID of sound |
+| `percentLeft` | `number` | sound volume percent 0 to 1 for left channel |
+| `percentRight` | `number` | sound volume percent 0 to 1 for right channel |
 
 | Output type | Description |
 | --- | --- |

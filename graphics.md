@@ -16,7 +16,7 @@ graphics module
 - [deleteTexture](#deleteTexture)
 - [createMeshCollection](#createMeshCollection)
 - [clearMesh](#clearMesh)
-- [addMeshData](#addMeshData)
+- [addMeshVertex](#addMeshVertex)
 - [getMeshData](#getMeshData)
 - [bindMesh](#bindMesh)
 - [activateMesh](#activateMesh)
@@ -300,20 +300,21 @@ Used to clear a mesh in memory for a given mesh collection and mesh.
 | --- | --- |
 | `integer` | ID of mesh, otherwise 0 |
 
-## addMeshData
+## addMeshVertex
 
 ```lua
-graphics.addMeshData(meshCollectionId, meshId, vertices, indicies)
+graphics.addMeshVertex(meshCollectionId, meshId, position, normal, texcoord)
 ```
 
-Used to add vertices and indices to a mesh in memory for a given mesh collection and mesh.
+Used to add a vertex in memory for a given mesh collection and mesh.
 
 | Input | Type | Description |
 | --- | --- | --- |
 | `meshCollectionId` | `integer` | ID of mesh collection |
 | `meshId` | `integer` | ID of mesh |
-| `vertices` | `vertexArray` | collection of vertices |
-@ [optional] indicies (indexArray) collection of indicies
+| `position` | `vector3` | position vector |
+| `normal` | `vector3` | normal vector |
+| `texcoord` | `vector2` | texcoord vector |
 
 | Output type | Description |
 | --- | --- |
@@ -1081,4 +1082,3 @@ Collection of Draw Mode Id values to number. Example:
 | --- | --- | --- |
 | `Triangle` | `string` | = 0 |
 | `Line` | `string` | = 1 |
-| `Point` | `string` | = 2 |
